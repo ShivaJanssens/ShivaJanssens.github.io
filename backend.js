@@ -1,14 +1,22 @@
-var xhr = new XMLHttpRequest();
-var url = "http://127.0.0.1:8000/nlp/returnOrganisations/";
-xhr.open("POST", url, true);
-xhr.setRequestHeader("Content-Type", "application/json");
+function submitRequest() {
+    var url = document.getElementById('url')
+    var text = document.getElementById('text')
 
-var data = JSON.stringify({"url": "https://hehe.be", "text": "My name is Shiva and I work at Solita Belgium."});
-xhr.send(data);
+    var xhr = new XMLHttpRequest();
+    var url = "http://127.0.0.1:8000/nlp/returnOrganisations/";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
 
-xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        var json = JSON.parse(xhr.responseText);
-        console.log(json.companies + ", " + json.persons);
-    }
-};
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var json = JSON.parse(xhr.responseText);
+            console.log(json.url + ", " + json.text + ", " + json.companies);
+        }
+    };
+
+    var data = JSON.stringify({"url": url, "text": text});
+    xhr.send(data);
+}
+
+
+
