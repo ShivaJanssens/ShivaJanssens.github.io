@@ -1,0 +1,1 @@
+document.getElementById("bjorn").innerHTML = "Shiva";
