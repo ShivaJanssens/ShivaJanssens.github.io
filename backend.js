@@ -1,5 +1,5 @@
 function submitRequest() {
-    var url = document.getElementById('url').innerHTML;
+    var urlInput = document.getElementById('url').innerHTML;
     var text = document.getElementById('text').innerHTML;
 
     var xhr = new XMLHttpRequest();
@@ -14,7 +14,7 @@ function submitRequest() {
         }
     };
 
-    var data = JSON.stringify({"url": url, "text": text});
+    var data = JSON.stringify({"url": urlInput, "text": text});
     xhr.send(data);
 }
 
