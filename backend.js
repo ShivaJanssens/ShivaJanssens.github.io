@@ -1,6 +1,6 @@
 function submitRequest() {
-    var urlInput = document.getElementById('url').innerHTML;
-    var text = document.getElementById('text').innerHTML;
+    var urlInput = document.getElementById('url').value;
+    var text = document.getElementById('text').value;
 
     console.log(urlInput)
     console.log(text)
