@@ -1,6 +1,6 @@
 function submitRequest() {
-    var url = document.getElementById('url')
-    var text = document.getElementById('text')
+    var url = document.getElementById('url');
+    var text = document.getElementById('text');
 
     var xhr = new XMLHttpRequest();
     var url = "http://127.0.0.1:8000/nlp/returnOrganisations/";
