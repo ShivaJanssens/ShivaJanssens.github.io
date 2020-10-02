@@ -44,7 +44,10 @@ function submitRequest() {
 
             var liSentiment = document.createElement("li");
             liSentiment.appendChild(document.createTextNode('██████'));
-            liSentiment.style.cssText = 'font-color: #0cee6c';
+            if(sentiment == 'positive') { liSentiment.style.cssText = 'color: #0cee6c';}
+            else if(sentiment == 'neutral') { liSentiment.style.cssText = 'color: #d5e3e3';}
+            else {liSentiment.style.cssText = 'color: #E33617';}
+           
             ul.appendChild(liSentiment);
         }
     };
