@@ -25,13 +25,13 @@ function submitRequest() {
             json.forEach(p => {
                 var liTitle = document.createElement("li");
                 liTitle.appendChild(document.createTextNode('Title: ' + p['title']));
-                ul.appendChild(liPerson);
+                ul.appendChild(liTitle);
                 var liUrl = document.createElement("li");
                 liUrl.appendChild(document.createTextNode('Url: ' + p['url']));
-                ul.appendChild(liPerson);
+                ul.appendChild(liUrl);
                 var blank = document.createElement("li");
                 blank.appendChild(document.createTextNode(''));
-                blank.appendChild(liPerson);
+                ul.appendChild(blank);
             });
 
             // responseCompanies.forEach(c => {
