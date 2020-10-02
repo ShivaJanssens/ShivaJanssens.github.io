@@ -18,9 +18,7 @@ function submitRequest() {
             var responseCompanies = json['companies'];
             
             var ul = document.getElementById("responseList");
-            ul.style.backgroundColor('#c1f7cf');
-            ul.style.borderRadius('20px');
-            ul.style.borderColor('#4db869');
+            ul.style.cssText = 'background-color: #c1f7cf;border-color: #4db869;border-radius: 20px;';
             ul.innerHTML = "";
             var liText = document.createElement("li");
             liText.appendChild(document.createTextNode('URL: ' + responseTitle));
