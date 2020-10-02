@@ -13,15 +13,25 @@ body {
 
 input[type=text] {
     width: 100%;
-    padding: 12px 20px;
+    padding: 8px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 5px;
+    font-size: 1.2em;
 }
 
 input[type=button] {
     width: 100%;
-    padding: 12px 20px;
+    padding: 8px 20px;
     margin: 8px 0;
+    font-size: 1.2em;
     box-sizing: border-box;
+}
+
+p{
+    font-size: 1.1em;
+}
+
+label{
+    font-size: 1.1em;
 }
