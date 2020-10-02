@@ -30,7 +30,7 @@ function submitRequest() {
                 liUrl.appendChild(document.createTextNode('Url: ' + p['url']));
                 ul.appendChild(liUrl);
                 var blank = document.createElement("li");
-                blank.appendChild(document.createTextNode(''));
+                blank.appendChild(document.createTextNode('\n'));
                 ul.appendChild(blank);
             });
 
