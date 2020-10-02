@@ -16,6 +16,8 @@ function submitRequest() {
 
             var responsePersons = json['persons'];
             var responseCompanies = json['companies'];
+
+            var sentiment = json['sentiment'];
             
             var ul = document.getElementById("responseList");
             ul.style.cssText = 'background-color: #c1f7cf;border-color: #4db869;border-radius: 5px;padding: 15px;list-style-type: none;font-size: 1.1em;';
@@ -39,6 +41,11 @@ function submitRequest() {
                 liCompany.appendChild(document.createTextNode('Company: ' + c));
                 ul.appendChild(liCompany);
             });
+
+            var liSentiment = document.createElement("li");
+            liSentiment.appendChild(document.createTextNode('██████'));
+            liSentiment.style.cssText = 'font-color: #0cee6c';
+            ul.appendChild(liSentiment);
         }
     };
 
