@@ -29,7 +29,13 @@ function submitRequest() {
             responsePersons.forEach(p => {
                 var liPerson = document.createElement("li");
                 liPerson.appendChild(document.createTextNode('Person: ' + p));
-                ul.appendChild(liPerson)
+                ul.appendChild(liPerson);
+            });
+
+            responseCompanies.forEach(c => {
+                var liCompany = document.createElement("li");
+                liCompany.appendChild(document.createTextNode('Company: ' + c));
+                ul.appendChild(liCompany);
             });
         }
     };
