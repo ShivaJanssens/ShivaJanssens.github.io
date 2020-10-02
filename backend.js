@@ -13,8 +13,21 @@ function submitRequest() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var json = JSON.parse(xhr.responseText);
-            console.log(json)
-            console.log(json.url + ", " + json.text + ", " + json.companies);
+
+            var responseTitle = json[text];
+            var responseUrl = json[url];
+            
+            var node = document.createElement("LI");                 // Create a <li> node
+            var textnode = document.createTextNode("Water");  
+            var textnode = document.createTextNode("Wind");     
+            var textnode = document.createTextNode(responseTitle);   
+            var textnode = document.createTextNode(responseUrl);         // Create a text node
+            node.appendChild(textnode);       // Create a text node
+            node.appendChild(textnode);     // Create a text node
+            node.appendChild(textnode);         // Create a text node
+            node.appendChild(textnode);                              // Append the text to <li>
+            document.getElementById("responseDev").appendChild(node);     // Append <li> to <ul> with id="myList" 
+
         }
     };
 
