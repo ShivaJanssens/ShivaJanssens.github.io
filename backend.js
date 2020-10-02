@@ -16,25 +16,20 @@ function submitRequest() {
 
             var responseTitle = json[text];
             var responseUrl = json[url];
+
+            console.log(responseTitle)
+            console.log(responseUrl)
             
-            var node = document.createElement("LI");                 // Create a <li> node
-            var textnode = document.createTextNode("Water");  
-            var textnode = document.createTextNode("Wind");     
-            var textnode = document.createTextNode(responseTitle);   
-            var textnode = document.createTextNode(responseUrl);         // Create a text node
-            node.appendChild(textnode);       // Create a text node
-            node.appendChild(textnode);     // Create a text node
-            node.appendChild(textnode);         // Create a text node
-            node.appendChild(textnode);                              // Append the text to <li>
-            document.getElementById("responseDev").appendChild(node);     // Append <li> to <ul> with id="myList" 
+            var ul = document.getElementById("responseList");
+            var liText = document.createElement("li");
+            liText.appendChild(document.createTextNode(responseTitle));
+            ul.appendChild(liText);
 
         }
     };
 
     var data = JSON.stringify({"url": urlInput, "text": text});
     xhr.send(data);
-
-    console.log("request send")
 }
 
 
