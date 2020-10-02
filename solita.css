@@ -1,5 +1,27 @@
-#divResponse {
-    background-color: #c1f7cf;
-    border-color: #4db869;
-    border-radius: 20px;
+h1 {
+    font-size: 2.5em;
+}
+body {
+    margin-left: 20%;
+    width: 60%;
+}
+user agent stylesheet
+body {
+    display: block;
+    margin: 8px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+input[type=button] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
 }
