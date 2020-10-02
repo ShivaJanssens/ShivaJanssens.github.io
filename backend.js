@@ -18,6 +18,7 @@ function submitRequest() {
             var responseCompanies = json['companies'];
             
             var ul = document.getElementById("responseList");
+            ul.innerHTML = "";
             var liText = document.createElement("li");
             liText.appendChild(document.createTextNode('URL: ' + responseTitle));
             var liUrl = document.createElement("li");
