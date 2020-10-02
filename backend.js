@@ -13,15 +13,24 @@ function submitRequest() {
 
             var responseTitle = json["text"];
             var responseUrl = json["url"];
+
+            var responsePersons = json['persons'];
+            var responseCompanies = json['companies'];
             
             var ul = document.getElementById("responseList");
             var liText = document.createElement("li");
-            liText.appendChild(document.createTextNode(responseTitle));
+            liText.appendChild(document.createTextNode('URL: ' + responseTitle));
             var liUrl = document.createElement("li");
-            liUrl.appendChild(document.createTextNode(responseUrl));
-            ul.appendChild(liText);
-            ul.appendChild(liUrl);
+            liUrl.appendChild(document.createTextNode('Title:' + responseUrl));
 
+            ul.appendChild(liUrl);
+            ul.appendChild(liText);
+
+            responsePersons.forEach(p => {
+                var liPerson = document.createElement("li");
+                liPerson.appendChild(document.createTextNode('Person: ' + p));
+                ul.appendChild(liPerson)
+            });
         }
     };
 
