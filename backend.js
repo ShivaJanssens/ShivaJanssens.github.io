@@ -21,9 +21,9 @@ function submitRequest() {
             ul.style.cssText = 'background-color: #c1f7cf;border-color: #4db869;border-radius: 5px;padding: 15px;list-style-type: none;font-size: 1.1em;';
             ul.innerHTML = "";
             var liText = document.createElement("li");
-            liText.appendChild(document.createTextNode('URL: ' + responseTitle));
+            liText.appendChild(document.createTextNode('Text: ' + responseTitle));
             var liUrl = document.createElement("li");
-            liUrl.appendChild(document.createTextNode('Title:' + responseUrl));
+            liUrl.appendChild(document.createTextNode('URL:' + responseUrl));
 
             ul.appendChild(liUrl);
             ul.appendChild(liText);
