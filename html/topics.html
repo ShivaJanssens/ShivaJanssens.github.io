@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/solita.css">
+</head>
+<body>
+<div id="header">
+    <img src="/images/solita-logo-black.jpg" height="120px"/>
+</div>
+<h1>Solita NER portal</h1>
+
+<p>Please insert a company you want to see more posts about.</p>
+
+<div id="divResponse">
+    <ul id="responseList">
+
+    </ul>
+</div>
+
+<form>
+    <label for="url">Post URL</label><br>
+    <input type="text" id="companyInput" name="url"> </br>
+    <input type="button" onclick="submitRequest()" value="Submit">
+  </form> 
+
+  <script src="/js/Topics.js"></script> 
+</body>
+</html>
