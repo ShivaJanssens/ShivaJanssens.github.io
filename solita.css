@@ -35,3 +35,8 @@ p{
 label{
     font-size: 1.1em;
 }
+
+#header{
+    background: black;
+    width: 100%;
+}
